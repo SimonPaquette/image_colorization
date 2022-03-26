@@ -1,3 +1,7 @@
 images/
+images_color/
 logs/
 tmp/
+test/
+test_color/
+.vscode/
