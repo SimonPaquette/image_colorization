@@ -88,6 +88,7 @@ def main():
     if not args.model_path.exists():
         raise FileNotFoundError(args.model_path)
     model = load_model(args.model_path)
+    model.summary()
 
     path = args.path
     images_path = []
