@@ -1,3 +1,5 @@
+# work in progress, readme will be completed when finished
+
 # image_colorization
 
 AI project for CSI 4106 Introduction to Artificial Intelligence - W2022
