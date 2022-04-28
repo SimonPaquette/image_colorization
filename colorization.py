@@ -119,44 +119,6 @@ def main():
         cv.imwrite(str(path), image)
 
 
-def visualizeLAB():
-    length = 256
-
-    L0 = np.full((length, length), 0).astype(np.uint8)
-    L64 = np.full((length, length), 64).astype(np.uint8)
-    L128 = np.full((length, length), 128).astype(np.uint8)
-    L192 = np.full((length, length), 192).astype(np.uint8)
-    L255 = np.full((length, length), 255).astype(np.uint8)
-
-    Ax = [[x for x in range(length)]] * 256
-    Ax = np.array(Ax).astype(np.uint8)
-
-    Ay = []
-    for x in range(length):
-        Ay.append([x] * 256)
-    Ay = np.array(Ay).astype(np.uint8)
-
-    imageL0 = cv.merge([L0, Ax, Ay])
-    imageL0 = cv.cvtColor(imageL0, cv.COLOR_LAB2BGR)
-    cv.imwrite("L0_Ax_By.png", imageL0)
-
-    imageL64 = cv.merge([L64, Ax, Ay])
-    imageL64 = cv.cvtColor(imageL64, cv.COLOR_LAB2BGR)
-    cv.imwrite("L64_Ax_By.png", imageL64)
-
-    imageL128 = cv.merge([L128, Ax, Ay])
-    imageL128 = cv.cvtColor(imageL128, cv.COLOR_LAB2BGR)
-    cv.imwrite("L128_Ax_By.png", imageL128)
-
-    imageL192 = cv.merge([L192, Ax, Ay])
-    imageL192 = cv.cvtColor(imageL192, cv.COLOR_LAB2BGR)
-    cv.imwrite("L192_Ax_By.png", imageL192)
-
-    imageL255 = cv.merge([L255, Ax, Ay])
-    imageL255 = cv.cvtColor(imageL255, cv.COLOR_LAB2BGR)
-    cv.imwrite("L255_Ax_By.png", imageL255)
-
-
 if __name__ == "__main__":
     main()
     # visualizeLAB()
